@@ -1,1 +1,31 @@
-print("hi")
+repeat
+wait()
+until game:IsLoaded()
+
+game.Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function ()
+	wait(1)
+
+	local args = {
+   		[1] = "Thanks for donating! Getting kicked in 3 seconds.",
+    	[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+	wait(3)
+
+	game.Players.LocalPlayer:Kick("You have been donated, rejoining.")
+
+	wait(1)
+
+	game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+
+	local queue_on_teleport =
+	queue_on_teleport or
+    syn and
+        syn.queue_on_teleport [[
+       wait(5) print("ServerHoped or rejoined")
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/JoeMama4832/pls-donate/main/main?token=GHSAT0AAAAAACA44DV567KGD45Z7JIVFMNIZBJV6SA'))()]]
+end)
+
+print("Kick script has been enabled.")
