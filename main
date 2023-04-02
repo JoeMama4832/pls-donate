@@ -25,7 +25,7 @@ game.Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function ()
     syn and
         syn.queue_on_teleport [[
        wait(5) print("ServerHoped or rejoined")
-       loadstring(game:HttpGet('https://raw.githubusercontent.com/JoeMama4832/pls-donate/main/main?token=GHSAT0AAAAAACA44DV567KGD45Z7JIVFMNIZBJV6SA'))()]]
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/JoeMama4832/pls-donate/main/main'))()]]
 end)
 
 print("Kick script has been enabled.")
